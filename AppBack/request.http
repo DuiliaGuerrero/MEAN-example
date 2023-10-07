@@ -1,0 +1,111 @@
+####
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Juan",
+    "lastname": "Mendez",
+    "age": "78",
+    "email": "juan.mz@gmail.com"
+}
+
+#####
+POST http://localhost:9000/api/usersMany HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+    "name": "Maria",
+    "lastname": "Mendez",
+    "age": "40",
+    "email": "maria90@gmail.com",
+    "password": "PerlaAmarilla23" 
+},
+    {
+        "name":"Pepita",
+        "lastname": "Lozano",
+        "age": 25,
+              "email": "pepita0@gmail.com",
+    "password": "Perla2"
+    },
+    {
+        "name":"Juan",
+        "lastname": "Aries",
+        "age": 78,
+        "email": "juan.a9807@gmail.com",
+    "password": "Pmaria23"
+    }
+]
+
+####
+
+GET http://localhost:9000/api/users HTTP/1.1
+
+####
+GET http://localhost:9000/api/users/6508e704609548b92a49d417 HTTP/1.1
+
+####
+
+PUT http://localhost:9000/api/users/64dfee41f9c727d730182cdf HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name":"Francisco",
+        "lastname": "Arbol",
+        "age": 34
+    }
+
+
+######
+DELETE http://localhost:9000/api/users/64dfee41f9c727d730182cdf HTTP/1.1
+
+###
+POST http://localhost:9000/api/register HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name":"Juan",
+        "lastname": "Aries",
+        "age": 78,
+        "email": "juan.a98@gmail.com",
+        "password": "Pmaria23"
+    }
+###
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+
+    {
+        "email": "juan.a98@gmail.com",
+        "password": "Pmaria23"
+    }
+###
+POST http://localhost:9000/api/goals HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTU4NTEwMTJ9.SWD-YvkWZHlR565bxY2dAlHHYYRuQWPpIbKiSRjGnoM
+
+{
+    "name": "CARRO",
+    "target": 5000000,
+    "deadline": "2024-12-11",
+    "createdBy": "650cf486011ab8490c8ac4c9"
+}
+
+###
+GET http://localhost:9000/api/goals HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUwOGU3MDQ2MDk1NDhiOTJhNDlkNDE3IiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg1NDEzNn0.H1VAI8mggEPs7p63-x1li0foZGqWfxVmLPVXFkG5gCE
+
+
+###
+POST http://localhost:9000/api/savingsProgress HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTU4NDc2Mjh9.Be07Bd-HYBCk0mLEZBre5mCGzxwS9SiPy2kYtZEXCM8
+
+{
+  "goal": "6508fa52b513de9d39ecb7db",
+  "date": "2024-02-15",
+  "amountSaved": 18000000
+}
+
+
+    
