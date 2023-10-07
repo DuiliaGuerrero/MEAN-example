@@ -1,0 +1,14 @@
+<div>
+    <h1>Lista de Metas</h1>
+    <form>
+      <ul>
+        <li *ngFor="let goal of goals">
+          <label>
+            <input type="radio" [value]="goal._id" [(ngModel)]="selectedGoalId" (change)="onGoalSelect()">
+            {{ goal.name }}
+          </label>
+        </li>
+      </ul>
+    </form>
+</div>
+  
