@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import apiRoutes from "../routes/api/api.js";
-import connectToDataBase from "../config/db.js";
+import apiRoutes from "./routes/api/api.js";
+import connectToDataBase from "./config/db.js";
 import cors from "cors"
 
 
