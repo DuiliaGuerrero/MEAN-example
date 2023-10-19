@@ -16,3 +16,5 @@ connectToDataBase();
 app.listen(port, ()=>{
     console.log("El servidor esta escuchando desde, ", port)
 });
+
+export default app;
